@@ -6,8 +6,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StudentController {
 
-    @GetMapping("/student")
-    public String student() {
-        return "Welcome to Student Information System";
+    @GetMapping("/fortune")
+    public String show() {
+        return "I am Lucky";
     }
 }
