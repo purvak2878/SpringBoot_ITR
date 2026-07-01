@@ -10,9 +10,11 @@ public class DemoController {
 
     private Coach myCoach;
 
+
     @Autowired
-    public DemoController(Coach theCoach) {
-        myCoach = theCoach;
+    public DemoController(@Qualifier("FootCoach") Coach fb) {
+       System.out.println("I am in Constructor:"+getClass().getSimpleName());
+       myCoach=fb;
     }
 
     @GetMapping("/dailyworkout")
